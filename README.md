@@ -34,6 +34,11 @@ Borrow = A’B
 Figure -02 HALF Subtractor
 
 **Truthtable**
+## Half adder:
+![image](https://github.com/StarbiyaS/HALF_ADDER_SUBTRACTOR/assets/144870533/95d0c566-ccba-48af-b3ae-212014fb5b0c)
+
+## Half subtractor:
+![image](https://github.com/StarbiyaS/HALF_ADDER_SUBTRACTOR/assets/144870533/27c93456-4314-417d-a25d-b8c79ca80453)
 
 **Procedure**
 
@@ -52,10 +57,45 @@ Figure -02 HALF Subtractor
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by:STARBIYA S RegisterNumber:212223040208
 
+**half adder**
+```
+module exp3(sum, carry,a,b); 
+input a,b; 
+output sum,carry; 
+xor sum1(sum,a,b); 
+and carry1(carry,a,b); 
+endmodule
+```
+
+**half subtractor**
+```
+ module exp3(diff,carry,a,b);
+ input a,b;
+ output diff,carry;
+ xor(diff,a,b);
+ assign carry=(~a)&b;
+ endmodule
+```
 **RTL Schematic**
+**half adder**
+
+![image](https://github.com/StarbiyaS/HALF_ADDER_SUBTRACTOR/assets/144870533/95e18de2-fa1f-4b2d-93ba-47bbea65f6de)
+
+**half subtractor**
+
+![image](https://github.com/StarbiyaS/HALF_ADDER_SUBTRACTOR/assets/144870533/a7023900-acee-429e-9633-045d2c973a79)
+
 
 **Output/TIMING Waveform**
 
+## half adder
+![image](https://github.com/StarbiyaS/HALF_ADDER_SUBTRACTOR/assets/144870533/59a57533-5dd4-43a9-9eb8-82c26bfec17c)
+
+
+## half subtractor
+![image](https://github.com/StarbiyaS/HALF_ADDER_SUBTRACTOR/assets/144870533/f457704c-358b-4c38-a3cd-5a5726c425cd)
+
 **Result:**
+ Thus the half subtractor and half adder circuits are designed and the truth tables is verified using quartus software.
